@@ -15,7 +15,7 @@
    viewBox="0 0 169.2782287597656 179.8581237792969"
    version="1.1"
    id="svg8"
-   inkscape:export-filename="C:\Users\Usuario\medidas.png"
+   inkscape:export-filename="../Assets/Sprites/Action.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
    inkscape:version="0.92.1 r15371"
@@ -14510,14 +14510,20 @@ rkJggg==
        cx="-968.0182495117188"
        cy="-446.5212707519531"
        r="99.96746063232422"
-       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,40.11541315714514,-14.66590673128763)" />
+       transform="matrix(0.2645833333333333,0,0,0.2645833333333333,40.11541315714514,-14.66590673128763)"
+       inkscape:export-filename="../Assets/Sprites\Action.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96" />
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none"
        x="-1044.659912109375"
        y="-479.8437805175781"
        id="text4550"
-       transform="matrix(1.113437675003527,0,0,1.113437675003527,947.1576216822872,417.6586634803122)"><tspan
+       transform="matrix(1.113437675003527,0,0,1.113437675003527,947.1576216822872,417.6586634803122)"
+       inkscape:export-filename="../Assets/Sprites\Action.png"
+       inkscape:export-xdpi="96"
+       inkscape:export-ydpi="96"><tspan
          sodipodi:role="line"
          id="tspan4548"
          x="-1044.659912109375"
