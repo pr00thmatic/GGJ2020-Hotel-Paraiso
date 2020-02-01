@@ -26,13 +26,11 @@ public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable {
     if (_elapsed >= _disposeMilestone && !_disposed) {
       _disposed = true;
       Dispose();
-      print("puff!");
     }
 
     if (_elapsed >= _fireMilestone && !_fireSpawned) {
       _fireSpawned = true;
       SpawnFire();
-      print("fuuuauaaaahh");
     }
   }
 
