@@ -44,4 +44,10 @@ public class InteractivePlayer : MonoBehaviour {
       Toss();
     }
   }
+
+  void LateUpdate () {
+    Vector3 p = transform.position;
+    p.z = 1;
+    transform.position = p;
+  }
 }
