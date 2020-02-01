@@ -4,6 +4,24 @@ using System.Collections.Generic;
 
 [System.Serializable]
 public class Verbs {
+  public static bool Down (int number) {
+    if (number == 0) {
+      return Input.GetAxis("Up0") < -0.5f ||
+        Input.GetKeyDown(KeyCode.S);
+    }
+    return Input.GetAxis("Up1") < -0.5f ||
+      Input.GetKeyDown(KeyCode.DownArrow);
+  }
+
+  public static bool Up (int number) {
+    if (number == 0) {
+      return Input.GetAxis("Up0") > 0.5f ||
+        Input.GetKeyDown(KeyCode.W);
+    }
+    return Input.GetAxis("Up1") > 0.5f ||
+      Input.GetKeyDown(KeyCode.UpArrow);
+  }
+
   public static bool Use (int number) {
     if (number == 0) {
       return Input.GetKeyDown(KeyCode.Joystick1Button0) ||
