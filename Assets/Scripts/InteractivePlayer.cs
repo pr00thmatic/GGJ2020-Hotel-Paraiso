@@ -36,11 +36,11 @@ public class InteractivePlayer : MonoBehaviour {
   void Update () {
     interactionIndicator.SetActive(interaction);
 
-    if (Input.GetKeyDown(KeyCode.Z) && interaction) {
+    if (Verbs.GrabDown(number) && interaction) {
       interaction.GetComponentInChildren<IInteractive>().Interact(this);
     }
 
-    if (Input.GetKeyDown(KeyCode.X)) {
+    if (Verbs.TossDown(number)) {
       Toss();
     }
   }

@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class PlayerControl : MonoBehaviour {
+  public InteractivePlayer player;
   public Rigidbody body;
   public float speed = 8;
   public float jumpSpeed = 3;
@@ -11,8 +12,8 @@ public class PlayerControl : MonoBehaviour {
   public float desiredPolarity = 1;
 
   public void UpdateOrientation () {
-    if (Input.GetAxis("Horizontal") != 0) {
-      desiredPolarity = Mathf.Sign(-Input.GetAxis("Horizontal"));
+    if (Input.GetAxis("Horizontal" + player.number) != 0) {
+      desiredPolarity = Mathf.Sign(-Input.GetAxis("Horizontal" + player.number));
     }
 
     transform.forward =
@@ -23,10 +24,10 @@ public class PlayerControl : MonoBehaviour {
 
   void Update () {
     Vector3 v = body.velocity;
-    v.x = -Input.GetAxis("Horizontal") * speed;
+    v.x = -Input.GetAxis("Horizontal" + player.number) * speed;
     body.velocity = v;
 
-    if (detector.isInFloor && Input.GetKeyDown(KeyCode.UpArrow)) {
+    if (detector.isInFloor && Verbs.Jump(player.number)) {
       body.AddForce(Vector3.up * jumpSpeed, ForceMode.VelocityChange);
     }
 
