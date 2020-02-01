@@ -8,4 +8,6 @@ public class LightbulbBox : MonoBehaviour, IInteractive {
   public void Interact (InteractivePlayer player) {
     player.Grab(Instantiate(lightBulb));
   }
+
+  public void Toss () {}
 }

@@ -6,4 +6,6 @@ public class InteractiveLightbulb : MonoBehaviour, IInteractive {
   public void Interact (InteractivePlayer player) {
     player.Grab(this.gameObject);
   }
+
+  public void Toss () {}
 }

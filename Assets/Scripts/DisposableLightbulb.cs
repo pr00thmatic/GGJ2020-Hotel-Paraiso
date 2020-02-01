@@ -2,7 +2,8 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable {
+public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable, IInteractive {
+  public bool IsOk { get => ok.activeSelf; }
   public GameObject ok;
   public GameObject notOk;
   public ParticleSystem sparks;
@@ -32,7 +33,22 @@ public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable {
       _fireSpawned = true;
       SpawnFire();
     }
+
+    if (_elapsed >= _fireMilestone && !tile.IsOnFire) {
+      _elapsed = _disposeMilestone;
+      _fireMilestone = fireTime.Uniform;
+      _fireSpawned = false;
+    }
   }
+
+  public void Interact (InteractivePlayer player) {
+    if (!IsOk && player.current &&
+        player.current.GetComponent<InteractiveLightbulb>()) {
+      Fix(player.current);
+    }
+  }
+
+  public void Toss () {}
 
   public void ResetTimers () {
     _fireSpawned = false;

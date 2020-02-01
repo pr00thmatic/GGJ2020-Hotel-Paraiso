@@ -3,9 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class InteractivePlayer : MonoBehaviour {
+  public int number = 0;
+
   public InteractiveItem interaction;
   public GameObject interactionIndicator;
   public float tossVelocity = 4;
+  public FireSensor fireSensor;
 
   public Transform itemAnchor;
   public GameObject current;
@@ -18,6 +21,7 @@ public class InteractivePlayer : MonoBehaviour {
     body.AddForce(transform.forward * tossVelocity + GetComponent<Rigidbody>().velocity,
                   ForceMode.VelocityChange);
     current.transform.parent = null;
+    current.GetComponentInChildren<IInteractive>().Toss();
     current = null;
   }
 
