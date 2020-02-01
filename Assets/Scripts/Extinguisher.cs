@@ -16,8 +16,7 @@ public class Extinguisher : MonoBehaviour, IInteractive {
       _owner = GetComponentInParent<InteractivePlayer>();
     }
 
-    if (Input.GetButtonDown("Action" + _owner.number) &&
-        _owner.fireSensor.fire) {
+    if (Verbs.Use(_owner.number) && _owner.fireSensor.fire) {
       _owner.fireSensor.fire.Interact(_owner);
     }
   }
