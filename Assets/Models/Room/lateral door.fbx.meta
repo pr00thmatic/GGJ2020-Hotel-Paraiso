@@ -4,11 +4,26 @@ ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
+    100002: lateral door
+    100004: simple wall.004
+    100006: simple wall.009
     400000: //RootNode
+    400002: lateral door
+    400004: simple wall.004
+    400006: simple wall.009
     2100000: No Name
     2300000: //RootNode
+    2300002: lateral door
+    2300004: simple wall.004
+    2300006: simple wall.009
     3300000: //RootNode
+    3300002: lateral door
+    3300004: simple wall.004
+    3300006: simple wall.009
     4300000: lateral door
+    4300002: simple wall.004
+    4300004: simple wall.009
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
