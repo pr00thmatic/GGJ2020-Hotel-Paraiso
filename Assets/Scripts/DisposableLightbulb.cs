@@ -7,25 +7,47 @@ public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable {
   public GameObject notOk;
   public ParticleSystem sparks;
   public RandomRange fireTime = new RandomRange(3, 6);
+  public RandomRange disposeTime = new RandomRange(3, 6);
+  public BuildingTile tile;
 
-  float _fireMilestone = -1;
+  float _disposeMilestone = 0;
+  float _fireMilestone = 0;
   float _elapsed = 0;
+
   bool _fireSpawned = false;
+  bool _disposed = false;
+
+  void Start () {
+    ResetTimers();
+  }
 
   void Update () {
-    if (ok.activeSelf) {
-      _elapsed += Time.deltaTime;
-      if (!_fireSpawned && _elapsed >= _fireMilestone) {
-        _fireSpawned = true;
-      }
+    _elapsed += Time.deltaTime;
+    if (_elapsed >= _disposeMilestone && !_disposed) {
+      _disposed = true;
+      Dispose();
+      print("puff!");
     }
+
+    if (_elapsed >= _fireMilestone && !_fireSpawned) {
+      _fireSpawned = true;
+      SpawnFire();
+      print("fuuuauaaaahh");
+    }
+  }
+
+  public void ResetTimers () {
+    _fireSpawned = false;
+    _disposed = false;
+    _elapsed = 0;
+    _disposeMilestone = disposeTime.Uniform;
+    _fireMilestone = _disposeMilestone + fireTime.Uniform;
   }
 
   public void Dispose () {
     ok.SetActive(false);
     notOk.SetActive(true);
     sparks.Play();
-    _fireMilestone = fireTime.Uniform;
   }
 
   public void Fix (GameObject replacement) {
@@ -34,7 +56,11 @@ public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable {
     ok.SetActive(true);
     notOk.SetActive(false);
     sparks.Stop();
-    _fireMilestone = -1;
-    _fireSpawned = false;
+
+    ResetTimers();
+  }
+
+  public void SpawnFire () {
+    tile.TurnFireOn();
   }
 }
