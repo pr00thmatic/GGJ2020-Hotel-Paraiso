@@ -18,6 +18,7 @@ public class Extinguisher : MonoBehaviour, IInteractive {
 
     if (Verbs.Use(_owner.number) && _owner.fireSensor.fire) {
       _owner.fireSensor.fire.Interact(_owner);
+      _owner.anims.TriggerExtintor();
     }
   }
 

@@ -38,6 +38,7 @@ public class DisposableLightbulb : MonoBehaviour, IDisposable, IFixable, IIntera
     if (!IsOk && player.current &&
         player.current.GetComponent<InteractiveLightbulb>()) {
       Fix(player.current);
+      player.anims.TriggerLight();
     }
   }
 
