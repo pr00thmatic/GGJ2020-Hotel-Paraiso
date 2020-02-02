@@ -15,6 +15,8 @@ public class Building : MonoBehaviour {
   public GameObject playerCameras;
   public AudioClip gameOverMusic;
   public AudioSource bocina;
+  public GameObject disableThisTooPlz;
+  public Animator musica;
 
   void Start () {
     floors = GetComponentsInChildren<Floor>();
@@ -40,15 +42,20 @@ public class Building : MonoBehaviour {
     if (IsGameOver()) {
       gameOver.SetActive(true);
       globalCamera.SetActive(true);
+      globalCamera.transform.parent = null;
       playerCameras.SetActive(false);
       bocina.clip = gameOverMusic;
       bocina.loop = false;
       bocina.Play();
+      disableThisTooPlz.SetActive(false);
+      musica.SetBool("on", false);
+      StartCoroutine(_EventuallyReturn());
     }
   }
 
   public bool IsGameOver () {
     foreach (Floor floors in floors) {
+      if (floors.isInvensible) continue;
       if (!floors.isDestroyed) {
         return false;
       }
@@ -71,5 +78,9 @@ public class Building : MonoBehaviour {
 
       floors[floor].StartDisaster();
     }
+  }
+
+  IEnumerator _EventuallyReturn () {
+    yield return new WaitForSeconds(5.5f);
   }
 }

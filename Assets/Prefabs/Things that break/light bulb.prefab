@@ -318,8 +318,8 @@ MonoBehaviour:
   notOk: {fileID: 7906802098206872699}
   sparks: {fileID: 7906802098920178246}
   fireTime:
-    a: 6
-    b: 10
+    a: 10
+    b: 15
   tile: {fileID: 0}
 --- !u!114 &7906802097974148757
 MonoBehaviour:

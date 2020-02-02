@@ -19,6 +19,10 @@ public class Extinguisher : MonoBehaviour, IInteractive {
     if (Verbs.Use(_owner.number) && _owner.fireSensor.fire) {
       _owner.fireSensor.fire.Interact(_owner);
       _owner.anims.TriggerExtintor();
+      ParticleSystem p = _owner.GetComponentInChildren<EfectoExtintor>().GetComponent<ParticleSystem>();
+      p.Play();
+      StopAllCoroutines();
+      StartCoroutine(_EventuallyTurnOff(p));
     }
   }
 
@@ -42,5 +46,10 @@ public class Extinguisher : MonoBehaviour, IInteractive {
       if (floor) {
         transform.parent = floor.transform;
       }
+  }
+
+  IEnumerator _EventuallyTurnOff (ParticleSystem p) {
+    yield return new WaitForSeconds(0.3f);
+    p.Stop();
   }
 }

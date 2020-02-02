@@ -10,6 +10,16 @@ ModelImporter:
     100008: elevator
     100010: elevator.001
     100012: simple wall.003
+    100014: Cube
+    100016: Cube.001
+    100018: Cube.002
+    100020: door
+    100022: door wall
+    100024: lateral door
+    100026: left corner wall
+    100028: right corner wall
+    100030: simple wall
+    100032: stairs
     400000: //RootNode
     400002: Armature
     400004: Bone
@@ -17,6 +27,16 @@ ModelImporter:
     400008: elevator
     400010: elevator.001
     400012: simple wall.003
+    400014: Cube
+    400016: Cube.001
+    400018: Cube.002
+    400020: door
+    400022: door wall
+    400024: lateral door
+    400026: left corner wall
+    400028: right corner wall
+    400030: simple wall
+    400032: stairs
     2100000: No Name
     2100002: wall
     2100004: elevator
@@ -26,17 +46,50 @@ ModelImporter:
     2100012: rombos
     2100014: gold
     2100016: footer
+    2100018: flores
+    2100020: emissive
+    2100022: red o_O
     2300000: //RootNode
     2300002: elevator
     2300004: simple wall.003
     2300006: elevator.001
+    2300008: Cube
+    2300010: Cube.001
+    2300012: Cube.002
+    2300014: door
+    2300016: door wall
+    2300018: lateral door
+    2300020: left corner wall
+    2300022: right corner wall
+    2300024: simple wall
+    2300026: stairs
     3300000: //RootNode
     3300002: elevator
     3300004: simple wall.003
     3300006: elevator.001
+    3300008: Cube
+    3300010: Cube.001
+    3300012: Cube.002
+    3300014: door
+    3300016: door wall
+    3300018: lateral door
+    3300020: left corner wall
+    3300022: right corner wall
+    3300024: simple wall
+    3300026: stairs
     4300000: elevator
     4300002: elevator.001
     4300004: simple wall.003
+    4300006: simple wall
+    4300008: left corner wall
+    4300010: right corner wall
+    4300012: door wall
+    4300014: door
+    4300016: stairs
+    4300018: Cube
+    4300020: Cube.001
+    4300022: Cube.002
+    4300024: lateral door
     9500000: //RootNode
     13700000: elevator
     13700002: elevator.001
