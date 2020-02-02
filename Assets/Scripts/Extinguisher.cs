@@ -37,6 +37,9 @@ public class Extinguisher : MonoBehaviour, IInteractive {
   /// <param name="other">The Collision data associated with this collision.</param>
   void OnCollisionEnter(Collision other)
   {
-      transform.parent = other.gameObject.GetComponentInParent<Floor>().transform;
+      Floor floor = other.gameObject.GetComponentInParent<Floor>();
+      if (floor) {
+        transform.parent = floor.transform;
+      }
   }
 }

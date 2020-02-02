@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7125405653452359407}
   - component: {fileID: 4843855606291212031}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: interaction trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 7988308758092615180}
   - component: {fileID: 3192364789961913487}
   - component: {fileID: 1705561367643873109}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: light bulb
   m_TagString: Untagged
   m_Icon: {fileID: 0}

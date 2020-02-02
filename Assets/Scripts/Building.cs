@@ -25,6 +25,9 @@ public class Building : MonoBehaviour {
     floors[index].isDestroyed = true;
     availableFloors.Remove(index);
     Extinguisher extinguisher = GetComponentInChildren<Extinguisher>();
+    if (extinguisher.GetComponentInParent<InteractivePlayer>()) {
+      return;
+    }
     if (extinguisher) {
       extinguisher.transform.position = floors[0].GetComponentInChildren<ExtinguisherPlace>().transform.position;
     }
