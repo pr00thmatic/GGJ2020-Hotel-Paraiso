@@ -59,8 +59,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.open doors
-    path: elevator
+    attribute: blendShape.open
+    path: elevator door/elevator
     classID: 137
     script: {fileID: 0}
   m_PPtrCurves: []
@@ -72,8 +72,8 @@ AnimationClip:
   m_ClipBindingConstant:
     genericBindings:
     - serializedVersion: 2
-      path: 328788787
-      attribute: 4019382584
+      path: 1360100208
+      attribute: 2758837156
       script: {fileID: 0}
       typeID: 137
       customType: 20
@@ -142,8 +142,8 @@ AnimationClip:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-    attribute: blendShape.open doors
-    path: elevator
+    attribute: blendShape.open
+    path: elevator door/elevator
     classID: 137
     script: {fileID: 0}
   m_EulerEditorCurves: []

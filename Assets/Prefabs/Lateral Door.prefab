@@ -12,6 +12,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lateral Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1758315807401059428, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3181046406252038204, guid: fffe66a8b2b7f5541834297f36f85a89,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -67,6 +72,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2394806367964900084, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7341186471535856367, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229052873937395983, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674793420346861358, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068803114691011676, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405020329312839896, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820019050385853372, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fffe66a8b2b7f5541834297f36f85a89, type: 3}
 --- !u!4 &7562341835021083335 stripped
@@ -85,6 +125,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1da4083a276eb564cbcce617fa0f1c07, type: 3}
       propertyPath: m_Name
       value: lateral door
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1da4083a276eb564cbcce617fa0f1c07, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1da4083a276eb564cbcce617fa0f1c07, type: 3}
       propertyPath: m_LocalPosition.x

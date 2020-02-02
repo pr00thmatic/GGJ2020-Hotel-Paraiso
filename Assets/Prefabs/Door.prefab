@@ -11,6 +11,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: door wall
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: d2ed597ff1846834da874c28eddcdd5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: d2ed597ff1846834da874c28eddcdd5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100004, guid: d2ed597ff1846834da874c28eddcdd5f, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400002, guid: d2ed597ff1846834da874c28eddcdd5f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -73,6 +85,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door
       objectReference: {fileID: 0}
+    - target: {fileID: 1758315807401059428, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3181046406252038204, guid: fffe66a8b2b7f5541834297f36f85a89,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -131,7 +148,32 @@ PrefabInstance:
     - target: {fileID: 7341186471535856367, guid: fffe66a8b2b7f5541834297f36f85a89,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6229052873937395983, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7674793420346861358, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1068803114691011676, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7405020329312839896, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7820019050385853372, guid: fffe66a8b2b7f5541834297f36f85a89,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fffe66a8b2b7f5541834297f36f85a89, type: 3}

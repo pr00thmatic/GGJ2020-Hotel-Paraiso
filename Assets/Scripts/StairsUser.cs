@@ -35,7 +35,6 @@ public class StairsUser : MonoBehaviour {
   }
 
   public void GoTo (Vector3 desired) {
-    Debug.Log(current, current);
     Elevator elevator = current.GetComponentInParent<Elevator>();
     _blocked = true;
     player.enabled = false;
