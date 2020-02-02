@@ -29,4 +29,14 @@ public class Extinguisher : MonoBehaviour, IInteractive {
   public void Toss () {
     isGrabbed = false;
   }
+
+  /// <summary>
+  /// OnCollisionEnter is called when this collider/rigidbody has begun
+  /// touching another rigidbody/collider.
+  /// </summary>
+  /// <param name="other">The Collision data associated with this collision.</param>
+  void OnCollisionEnter(Collision other)
+  {
+      transform.parent = other.gameObject.GetComponentInParent<Floor>().transform;
+  }
 }

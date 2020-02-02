@@ -18,10 +18,16 @@ public class Building : MonoBehaviour {
     }
     players = GetComponentsInChildren<InteractivePlayer>();
     StartCoroutine(_PeriodicDisaster());
+    StartCoroutine(_PeriodicDisaster());
   }
 
   public void DestroyFloor (int index) {
     floors[index].isDestroyed = true;
+    availableFloors.Remove(index);
+    Extinguisher extinguisher = GetComponentInChildren<Extinguisher>();
+    if (extinguisher) {
+      extinguisher.transform.position = floors[0].GetComponentInChildren<ExtinguisherPlace>().transform.position;
+    }
   }
 
   IEnumerator _PeriodicDisaster () {

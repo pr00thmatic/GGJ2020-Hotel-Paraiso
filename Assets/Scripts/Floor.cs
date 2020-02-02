@@ -7,13 +7,14 @@ public class Floor : MonoBehaviour {
   public float hp = 100;
   public bool isDestroyed = false;
   public GameObject debris;
+  public bool isInvensible = false;
 
   void Start () {
     lightbulbs = GetComponentsInChildren<DisposableLightbulb>();
   }
 
   void Update () {
-    if (hp <= 0 && !isDestroyed) {
+    if (hp <= 0 && !isDestroyed && !isInvensible) {
       GetComponentInParent<Building>().DestroyFloor(transform.GetSiblingIndex());
       debris.SetActive(true);
     }
