@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class InteractivePlayer : MonoBehaviour {
   public int number = 0;
 
+  public GameObject model;
   public InteractiveItem interaction;
   public GameObject interactionIndicator;
   public float tossVelocity = 4;
@@ -43,5 +44,11 @@ public class InteractivePlayer : MonoBehaviour {
     if (Verbs.TossDown(number)) {
       Toss();
     }
+  }
+
+  void LateUpdate () {
+    Vector3 p = transform.position;
+    p.z = 1;
+    transform.position = p;
   }
 }
