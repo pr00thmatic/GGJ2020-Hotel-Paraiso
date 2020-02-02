@@ -6,14 +6,22 @@ public class Building : MonoBehaviour {
   public Perifono perifono;
   public InteractivePlayer[] players;
   public Floor[] floors;
+  public List<int> availableFloors;
   public RandomRange disasterTime = new RandomRange(6, 12);
   public RandomRange displaceAmount = new RandomRange(0, 2);
   public float displacedDisasterProbability = 0.8f;
 
   void Start () {
     floors = GetComponentsInChildren<Floor>();
+    for (int i=0; i<floors.Length; i++) {
+      availableFloors.Add(i);
+    }
     players = GetComponentsInChildren<InteractivePlayer>();
     StartCoroutine(_PeriodicDisaster());
+  }
+
+  public void DestroyFloor (int index) {
+    floors[index].isDestroyed = true;
   }
 
   IEnumerator _PeriodicDisaster () {
@@ -23,9 +31,10 @@ public class Building : MonoBehaviour {
 
       if (Random.Range(0,1f) < displacedDisasterProbability) {
         floor = (int) Mathf.Clamp(players[Random.Range(0, players.Length)].floor +
-                                  0, (int) displaceAmount.Uniform, floors.Length);
+                                  0, (int) displaceAmount.Uniform,
+                                  availableFloors.Count);
       } else {
-        floor = Random.Range(0, floors.Length);
+        floor = availableFloors[Random.Range(0, availableFloors.Count)];
       }
 
       floors[floor].StartDisaster();

@@ -4,9 +4,19 @@ using System.Collections.Generic;
 
 public class Floor : MonoBehaviour {
   public DisposableLightbulb[] lightbulbs;
+  public float hp = 100;
+  public bool isDestroyed = false;
+  public GameObject debris;
 
   void Start () {
     lightbulbs = GetComponentsInChildren<DisposableLightbulb>();
+  }
+
+  void Update () {
+    if (hp <= 0 && !isDestroyed) {
+      GetComponentInParent<Building>().DestroyFloor(transform.GetSiblingIndex());
+      debris.SetActive(true);
+    }
   }
 
   public void StartDisaster () {

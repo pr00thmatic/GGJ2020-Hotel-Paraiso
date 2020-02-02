@@ -205,7 +205,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.1
+  m_Intensity: 0.03
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -1685,9 +1685,10 @@ MonoBehaviour:
   perifono: {fileID: 623134857}
   players: []
   floors: []
+  availableFloors: 
   disasterTime:
-    a: 6
-    b: 12
+    a: 3
+    b: 4
   displaceAmount:
     a: 0
     b: 2
@@ -3080,6 +3081,8 @@ MonoBehaviour:
   step: 1
   gainPerSeconds: 2
   isOn: 0
+  damagePerTime: 5
+  floor: {fileID: 0}
 --- !u!1001 &1715061540
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3306,6 +3309,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lightbulbs: []
+  hp: 100
+  isDestroyed: 0
+  debris: {fileID: 0}
 --- !u!1 &1873631974
 GameObject:
   m_ObjectHideFlags: 0
