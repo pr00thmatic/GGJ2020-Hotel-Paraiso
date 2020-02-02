@@ -10,6 +10,11 @@ ModelImporter:
     400002: //RootNode
     400004: door wall
     2100000: No Name
+    2100002: Wood
+    2100004: cuadritos
+    2100006: rombos
+    2100008: footer
+    2100010: gold
     2300000: door
     2300002: door wall
     2300004: //RootNode
@@ -19,7 +24,32 @@ ModelImporter:
     4300000: door wall
     4300002: door
     2186277476908879412: ImportLogs
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wood
+    second: {fileID: 2100000, guid: d60f1277f31a33041b1f3674ddc93262, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: cuadritos
+    second: {fileID: 2100000, guid: ba57438781cc0c94e93ce746ac1e432b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: footer
+    second: {fileID: 2100000, guid: 78238da0b4e97d345966a72ce374e1ee, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: gold
+    second: {fileID: 2100000, guid: c37c28472c79b054ca5c9c4e24d609ef, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: rombos
+    second: {fileID: 2100000, guid: c81e1dad4e8d3414b8c0b13fffa73b90, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

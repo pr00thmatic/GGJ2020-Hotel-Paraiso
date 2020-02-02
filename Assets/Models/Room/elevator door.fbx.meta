@@ -8,16 +8,21 @@ ModelImporter:
     100004: Bone_end
     100006: elevator
     100008: //RootNode
+    100010: elevator.001
     400000: Armature
     400002: Bone
     400004: Bone_end
     400006: elevator
     400008: //RootNode
+    400010: elevator.001
     2100000: elevator
     2100002: elevator2
+    2100004: gold
     4300000: elevator
+    4300002: elevator.001
     9500000: //RootNode
     13700000: elevator
+    13700002: elevator.001
   externalObjects: {}
   materials:
     importMaterials: 1

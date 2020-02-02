@@ -21,6 +21,11 @@ ModelImporter:
     2100002: wall
     2100004: elevator
     2100006: elevator2
+    2100008: Wood
+    2100010: cuadritos
+    2100012: rombos
+    2100014: gold
+    2100016: footer
     2300000: //RootNode
     2300002: elevator
     2300004: simple wall.003

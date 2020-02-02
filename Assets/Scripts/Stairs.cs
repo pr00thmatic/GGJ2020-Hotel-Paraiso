@@ -10,7 +10,7 @@ public class Stairs : MonoBehaviour {
 
   public Stairs GetUp () {
     Stairs newUp = up;
-    while (newUp && up.GetComponentInParent<Floor>().isDestroyed) {
+    while (newUp && newUp.GetComponentInParent<Floor>().isDestroyed) {
       newUp = newUp.up;
     }
 
