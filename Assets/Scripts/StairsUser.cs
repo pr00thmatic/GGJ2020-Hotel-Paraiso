@@ -25,16 +25,23 @@ public class StairsUser : MonoBehaviour {
   void Update () {
     if (_blocked) return;
 
-    if (Verbs.Up(player.number) && current && current.up) {
-      GoTo(current.up.transform.position);
+    Stairs up = null;
+    Stairs down = null;
+    if (current) {
+      up = current.GetUp();
+      down = current.GetDown();
     }
 
-    if (Verbs.Down(player.number) && current && current.down) {
-      GoTo(current.down.transform.position);
+    if (Verbs.Up(player.number) && current && up) {
+      GoTo(up);
+    }
+
+    if (Verbs.Down(player.number) && current && down) {
+      GoTo(down);
     }
   }
 
-  public void GoTo (Vector3 desired) {
+  public void GoTo (Stairs desired) {
     Elevator elevator = current.GetComponentInParent<Elevator>();
     _blocked = true;
     player.enabled = false;
@@ -42,12 +49,12 @@ public class StairsUser : MonoBehaviour {
     StartCoroutine(_EventuallyReturn(desired, elevator));
   }
 
-  IEnumerator _EventuallyReturn (Vector3 desired, Elevator elevator) {
+  IEnumerator _EventuallyReturn (Stairs desired, Elevator elevator) {
     float elapsed = 0;
     Vector3 pos = player.transform.position;
-    Vector3 animTarget = (desired.y > player.transform.position.y?
+    Vector3 animTarget = (desired.transform.position.y > player.transform.position.y?
                           current.animTargetUp.position: current.animTargetDown.position);
-    player.floor += (desired.y > player.transform.position.y? +1: -1);
+    player.floor += (desired.transform.position.y > player.transform.position.y? +1: -1);
     Rigidbody body = player.GetComponent<Rigidbody>();
 
     body.isKinematic = true;
@@ -74,7 +81,7 @@ public class StairsUser : MonoBehaviour {
     body.velocity = Vector3.zero;
 
     Vector3 p = player.transform.position;
-    p.x = desired.x; p.y = desired.y;
+    p.x = desired.transform.position.x; p.y = desired.transform.position.y;
     player.transform.position = p - Vector3.right;
   }
 }

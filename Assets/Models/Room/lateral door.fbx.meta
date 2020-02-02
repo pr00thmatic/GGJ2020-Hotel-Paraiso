@@ -12,6 +12,11 @@ ModelImporter:
     400004: simple wall.004
     400006: simple wall.009
     2100000: No Name
+    2100002: Wood
+    2100004: cuadritos
+    2100006: rombos
+    2100008: footer
+    2100010: gold
     2300000: //RootNode
     2300002: lateral door
     2300004: simple wall.004
