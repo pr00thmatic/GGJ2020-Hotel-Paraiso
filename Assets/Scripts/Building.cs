@@ -10,6 +10,11 @@ public class Building : MonoBehaviour {
   public RandomRange disasterTime = new RandomRange(6, 12);
   public RandomRange displaceAmount = new RandomRange(0, 2);
   public float displacedDisasterProbability = 0.8f;
+  public GameObject gameOver;
+  public GameObject globalCamera;
+  public GameObject playerCameras;
+  public AudioClip gameOverMusic;
+  public AudioSource bocina;
 
   void Start () {
     floors = GetComponentsInChildren<Floor>();
@@ -18,7 +23,7 @@ public class Building : MonoBehaviour {
     }
     players = GetComponentsInChildren<InteractivePlayer>();
     StartCoroutine(_PeriodicDisaster());
-    StartCoroutine(_PeriodicDisaster());
+    // StartCoroutine(_PeriodicDisaster());
   }
 
   public void DestroyFloor (int index) {
@@ -31,6 +36,24 @@ public class Building : MonoBehaviour {
     if (extinguisher) {
       extinguisher.transform.position = floors[0].GetComponentInChildren<ExtinguisherPlace>().transform.position;
     }
+
+    if (IsGameOver()) {
+      gameOver.SetActive(true);
+      globalCamera.SetActive(true);
+      playerCameras.SetActive(false);
+      bocina.clip = gameOverMusic;
+      bocina.loop = false;
+      bocina.Play();
+    }
+  }
+
+  public bool IsGameOver () {
+    foreach (Floor floors in floors) {
+      if (!floors.isDestroyed) {
+        return false;
+      }
+    }
+    return true;
   }
 
   IEnumerator _PeriodicDisaster () {
