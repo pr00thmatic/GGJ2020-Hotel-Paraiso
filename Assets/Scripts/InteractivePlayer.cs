@@ -4,6 +4,7 @@ using System.Collections.Generic;
 
 public class InteractivePlayer : MonoBehaviour {
   public int number = 0;
+  public int floor = 0;
 
   public GameObject model;
   public InteractiveItem interaction;

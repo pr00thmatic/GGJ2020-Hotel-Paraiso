@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7211644898373854051}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,6 @@ GameObject:
   - component: {fileID: 3246465554246050536}
   - component: {fileID: 3246465554246050541}
   - component: {fileID: 3246465554246050542}
-  - component: {fileID: 3246465554246050543}
   m_Layer: 0
   m_Name: model
   m_TagString: Untagged
@@ -111,20 +110,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!136 &3246465554246050543
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3246465554246050537}
-  m_Material: {fileID: 13400000, guid: 9f19e781d36d5e840a3cefd0723ac2a0, type: 2}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3246465554335976413
 GameObject:
   m_ObjectHideFlags: 0
@@ -642,6 +627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   number: 0
+  floor: 0
   model: {fileID: 3246465554246050537}
   interaction: {fileID: 0}
   interactionIndicator: {fileID: 3246465554335976413}
@@ -664,6 +650,7 @@ MonoBehaviour:
   player: {fileID: 3246465555596311252}
   current: {fileID: 0}
   cooldown: 2.5
+  elevatorTime: 0.5
 --- !u!1 &3542760520961873969
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,7 +691,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7100345864038812090}
   - component: {fileID: 1027968289700103405}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -47,6 +47,7 @@ public class StairsUser : MonoBehaviour {
     Vector3 pos = player.transform.position;
     Vector3 animTarget = (desired.y > player.transform.position.y?
                           current.animTargetUp.position: current.animTargetDown.position);
+    player.floor += (desired.y > player.transform.position.y? +1: -1);
     Rigidbody body = player.GetComponent<Rigidbody>();
 
     body.isKinematic = true;
